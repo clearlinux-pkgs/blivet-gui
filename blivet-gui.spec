@@ -4,7 +4,7 @@
 #
 Name     : blivet-gui
 Version  : 2.3.0.1
-Release  : 11
+Release  : 12
 URL      : https://github.com/storaged-project/blivet-gui/releases/download/2.3.0-1/blivet-gui-2.3.0.tar.gz
 Source0  : https://github.com/storaged-project/blivet-gui/releases/download/2.3.0-1/blivet-gui-2.3.0.tar.gz
 Summary  : Tool for data storages configuration
@@ -82,7 +82,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1628538080
+export SOURCE_DATE_EPOCH=1635707408
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
