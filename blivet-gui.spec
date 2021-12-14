@@ -4,7 +4,7 @@
 #
 Name     : blivet-gui
 Version  : 2.3.0.1
-Release  : 12
+Release  : 13
 URL      : https://github.com/storaged-project/blivet-gui/releases/download/2.3.0-1/blivet-gui-2.3.0.tar.gz
 Source0  : https://github.com/storaged-project/blivet-gui/releases/download/2.3.0-1/blivet-gui-2.3.0.tar.gz
 Summary  : Tool for data storages configuration
