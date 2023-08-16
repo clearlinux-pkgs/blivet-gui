@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : blivet-gui
-Version  : 2.4.1
-Release  : 16
-URL      : https://github.com/storaged-project/blivet-gui/releases/download/2.4.1/blivet-gui-2.4.1.tar.gz
-Source0  : https://github.com/storaged-project/blivet-gui/releases/download/2.4.1/blivet-gui-2.4.1.tar.gz
+Version  : 2.4.2
+Release  : 17
+URL      : https://github.com/storaged-project/blivet-gui/releases/download/2.4.2/blivet-gui-2.4.2.tar.gz
+Source0  : https://github.com/storaged-project/blivet-gui/releases/download/2.4.2/blivet-gui-2.4.2.tar.gz
 Summary  : Tool for data storages configuration
 Group    : Development/Tools
 License  : GPL-2.0 LGPL-2.1
@@ -78,10 +78,10 @@ python3 components for the blivet-gui package.
 
 
 %prep
-%setup -q -n blivet-gui-2.4.1
-cd %{_builddir}/blivet-gui-2.4.1
+%setup -q -n blivet-gui-2.4.2
+cd %{_builddir}/blivet-gui-2.4.2
 pushd ..
-cp -a blivet-gui-2.4.1 buildavx2
+cp -a blivet-gui-2.4.2 buildavx2
 popd
 
 %build
@@ -89,15 +89,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680726470
+export SOURCE_DATE_EPOCH=1692196276
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
